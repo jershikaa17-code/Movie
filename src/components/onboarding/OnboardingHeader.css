@@ -50,6 +50,53 @@
   font-size: 0.7rem;
 }
 
+.onboarding-header__install {
+  position: relative;
+}
+
+.onboarding-header__icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.onboarding-header__icon-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+.onboarding-header__hint {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  width: 220px;
+  background: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  padding: 0.85rem 0.95rem;
+  z-index: 30;
+}
+
+.onboarding-header__hint p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.onboarding-header__hint strong {
+  color: #fff;
+}
+
 .onboarding-header__signout {
   background: var(--accent-red);
   color: #fff;
