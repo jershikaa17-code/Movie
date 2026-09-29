@@ -1,0 +1,96 @@
+.trailer-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4%;
+  animation: trailerFadeIn 0.2s ease;
+}
+
+@keyframes trailerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.trailer-modal__box {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  background: #000;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.trailer-modal__close {
+  position: absolute;
+  top: -2.75rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trailer-modal__player {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.trailer-modal__player iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.trailer-modal__state {
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.trailer-modal__unavailable {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0;
+}
+
+.trailer-modal__spinner {
+  width: 44px;
+  height: 44px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top-color: var(--accent-red);
+  border-radius: 50%;
+  animation: trailerSpin 0.8s linear infinite;
+}
+
+@keyframes trailerSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .trailer-modal__close {
+    top: -2.25rem;
+    right: -0.25rem;
+  }
+}

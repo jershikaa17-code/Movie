@@ -1,0 +1,108 @@
+.language-menu {
+  position: relative;
+}
+
+.language-menu__toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  padding: 0.5rem 0.9rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.language-menu__toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+.language-menu__icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1em;
+  height: 1.1em;
+  font-size: 0.95em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.language-menu__icon span {
+  position: absolute;
+  right: -0.35em;
+  bottom: -0.3em;
+  font-size: 0.72em;
+  font-weight: 800;
+  color: inherit;
+  -webkit-text-stroke: 2px #000;
+  paint-order: stroke fill;
+}
+
+.language-menu__caret {
+  font-size: 0.7rem;
+  transition: transform 0.18s ease;
+}
+
+.language-menu__caret--open {
+  transform: rotate(180deg);
+}
+
+.language-menu__dropdown {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  left: 0;
+  min-width: 160px;
+  background: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  padding: 0.4rem;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  animation: languageMenuIn 0.18s ease both;
+  z-index: 20;
+}
+
+@keyframes languageMenuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.language-menu__item {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-align: left;
+  padding: 0.55rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.language-menu__item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.language-menu__item--active {
+  color: #fff;
+  font-weight: 700;
+}

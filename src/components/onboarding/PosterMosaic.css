@@ -1,0 +1,48 @@
+.poster-mosaic {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #000;
+  contain: strict;
+  transform: translateZ(0);
+}
+
+.poster-mosaic__grid {
+  position: absolute;
+  top: -8%;
+  left: -4%;
+  width: 108%;
+  height: 130%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 4px;
+  transform: rotate(-6deg) scale(1.15) translateZ(0);
+  opacity: 0.55;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.poster-mosaic__tile {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #1a1a1a;
+  contain: strict;
+}
+
+.poster-mosaic__tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.poster-mosaic__tile--empty {
+  background: linear-gradient(160deg, #1f1f1f, #0a0a0a);
+}
+
+@media (max-width: 768px) {
+  .poster-mosaic__grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

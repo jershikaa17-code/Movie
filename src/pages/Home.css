@@ -1,0 +1,14 @@
+.home {
+  min-height: 100vh;
+}
+
+.home__rows {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .home__rows {
+    padding-top: 0.5rem;
+  }
+}

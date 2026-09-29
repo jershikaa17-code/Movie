@@ -1,0 +1,30 @@
+.my-list {
+  padding-top: 6.5rem;
+  padding-bottom: 4rem;
+  min-height: 80vh;
+}
+
+.my-list__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 1.75rem;
+}
+
+.my-list__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 2rem 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .my-list {
+    padding-top: 5.5rem;
+  }
+  .my-list__title {
+    font-size: 1.4rem;
+  }
+  .my-list__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 0.75rem;
+  }
+}

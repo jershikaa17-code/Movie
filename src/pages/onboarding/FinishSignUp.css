@@ -1,0 +1,248 @@
+.finish-signup {
+  background: var(--bg-black);
+  min-height: 100vh;
+}
+
+.finish-signup__hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.finish-signup__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.75) 55%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+}
+
+.finish-signup__hero-content {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 6%;
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.finish-signup__hero-content h1 {
+  font-size: clamp(2.15rem, 3.6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+  margin: 0 0 1rem;
+  max-width: 900px;
+  animation: heroReveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.05s;
+}
+
+.finish-signup__price {
+  font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 1.6rem;
+  animation: heroReveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.2s;
+}
+
+.finish-signup__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: var(--accent-red);
+  color: #fff;
+  border: none;
+  padding: 0.95rem 2.2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  animation: heroReveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.34s;
+}
+
+.finish-signup__cta span {
+  font-size: 1.35rem;
+}
+
+.finish-signup__skip {
+  display: block;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 1rem;
+  animation: heroReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.46s;
+}
+
+.finish-signup__skip:hover {
+  color: #fff;
+}
+
+.finish-signup__cta:hover {
+  background: var(--accent-red-hover);
+  transform: translateY(-2px);
+}
+
+.finish-signup__body {
+  padding-top: 2rem;
+}
+
+.finish-signup__reasons {
+  padding: 3rem 4% 1rem;
+}
+
+.finish-signup__reasons h2,
+.finish-signup__faq h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 1.75rem;
+}
+
+.finish-signup__reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.finish-signup__reason-card {
+  background: linear-gradient(160deg, #2a2450, #150f30);
+  border-radius: 6px;
+  padding: 1.75rem;
+  min-height: 200px;
+}
+
+.finish-signup__reason-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+.finish-signup__reason-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.finish-signup__faq {
+  padding: 3rem 4%;
+}
+
+.finish-signup__bottom-cta {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 4% 2rem;
+}
+
+.finish-signup__support {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin: 0 0 3rem;
+}
+
+.finish-signup__footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 4% 3rem;
+}
+
+.finish-signup__footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem 2rem;
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+.finish-signup__footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.finish-signup__footer-col a {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.finish-signup__footer-col a:hover {
+  text-decoration: underline;
+  color: var(--text-primary);
+}
+
+.finish-signup__language {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: 1px solid var(--text-muted);
+  color: var(--text-secondary);
+  padding: 0.5rem 0.9rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.finish-signup__brand {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .finish-signup__reasons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .finish-signup__footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .finish-signup__hero {
+    min-height: 80vh;
+  }
+  .finish-signup__hero-content h1 {
+    font-size: clamp(2.125rem, 9vw, 2.625rem);
+  }
+  .finish-signup__reasons-grid {
+    grid-template-columns: 1fr;
+  }
+  .finish-signup__reasons h2,
+  .finish-signup__faq h2 {
+    font-size: 1.4rem;
+  }
+  .finish-signup__cta {
+    font-size: 1.05rem;
+    padding: 0.8rem 1.75rem;
+  }
+}
